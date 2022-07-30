@@ -1,0 +1,83 @@
+grid_search:
+  class: GridSearchCV
+  module: sklearn.model_selection
+  params:
+    cv: 5
+    verbose: 2
+model_selection:
+  module_0:
+    class: LinearRegression
+    module: sklearn.linear_model
+    params:
+      fit_intercept: true
+    search_param_grid:
+      fit_intercept:
+      - true
+      - false
+  module_1:      
+    class: RandomForestRegressor
+    module: sklearn.ensemble
+    params:
+      min_samples_leaf: 6
+    search_param_grid:
+      min_samples_leaf:
+        - 5
+        - 10
+        - 15
+      n_estimators:
+        - 5
+        - 10
+        - 20
+        - 100
+      max_depth:
+        - 4
+        - 5
+        - 7
+        - 8
+      min_samples_split:
+        - 10
+        - 20
+        - 30
+        - 40  
+  module_2:
+    class: SVR
+    module: sklearn.svm
+    params:
+      C: 1
+    search_param_grid:
+      C:
+        - 1
+        - 5
+        - 10
+      kernel:
+        - rbf
+        - poly
+        - sigmoid
+      epsilon:
+        - 0.1
+        - 0.2
+        - 1
+        - 5
+  module_3:
+    class: DecisionTreeRegressor
+    module: sklearn.tree
+    params:
+      max_depth:
+        - 4
+    search_param_grid:
+      max_depth:
+        - 4
+        - 5
+        - 10
+        - 20
+      min_samples_split:
+        - 10
+        - 20
+        - 30
+        - 40
+      min_samples_leaf:
+        - 10
+        - 20
+        - 30 
+        - 5
+

@@ -1,0 +1,16 @@
+2022-07-30 15:34:26,525||INFO||224||_internal.py||_log|| * Running on http://127.0.0.1:5000 (Press CTRL+C to quit) 
+2022-07-30 15:34:31,601||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:31] "GET / HTTP/1.1" 200 - 
+2022-07-30 15:34:33,811||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:33] "[33mGET /logs HTTP/1.1[0m" 404 - 
+2022-07-30 15:34:36,093||INFO||191||app.py||render_log_dir||req_path: HeatLoadslogs 
+2022-07-30 15:34:36,101||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:36] "GET /HeatLoadslogs HTTP/1.1" 200 - 
+2022-07-30 15:34:37,568||INFO||191||app.py||render_log_dir||req_path: HeatLoadslogs/log_2022-07-30-15-30-53.log 
+2022-07-30 15:34:37,614||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:37] "GET /HeatLoadslogs/HeatLoadslogs/log_2022-07-30-15-30-53.log HTTP/1.1" 200 - 
+2022-07-30 15:34:41,441||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:41] "GET / HTTP/1.1" 200 - 
+2022-07-30 15:34:43,261||INFO||191||app.py||render_log_dir||req_path: HeatLoadslogs 
+2022-07-30 15:34:43,263||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:43] "GET /HeatLoadslogs HTTP/1.1" 200 - 
+2022-07-30 15:34:44,080||INFO||191||app.py||render_log_dir||req_path: HeatLoadslogs/log_2022-07-30-15-34-25.log 
+2022-07-30 15:34:44,109||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:44] "GET /HeatLoadslogs/HeatLoadslogs/log_2022-07-30-15-34-25.log HTTP/1.1" 200 - 
+2022-07-30 15:34:45,883||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:45] "GET /artifact HTTP/1.1" 200 - 
+2022-07-30 15:34:47,026||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:47] "GET /saved_models HTTP/1.1" 200 - 
+2022-07-30 15:34:50,280||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:50] "GET / HTTP/1.1" 200 - 
+2022-07-30 15:34:57,035||INFO||224||_internal.py||_log||127.0.0.1 - - [30/Jul/2022 15:34:57] "[33mGET /logs HTTP/1.1[0m" 404 - 

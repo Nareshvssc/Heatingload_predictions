@@ -1,0 +1,61 @@
+columns:
+  X1: float
+  X3: float
+  X4: float
+  X5: float
+  X6: float
+  X7: float
+  X8: float
+  Y1: float
+  Y2: float
+
+numerical_columns:
+  - X1
+  - X3
+
+categorical_columns:
+  - X4
+  - X5
+  - X6
+  - X7
+  - X8
+
+
+
+target_column: 
+  - Y1
+  - Y2
+
+target_column_pred:
+  - Y1
+
+domain_value:
+  X4:
+    - 110.25
+    - 122.5
+    - 147.0
+    - 220.5
+  X5:
+    - 7
+    - 3.5  
+  X6:
+    - 2
+    - 3
+    - 4
+    - 5
+  X7:
+    - 0.0
+    - 0.1
+    - 0.25
+    - 0.4
+  X8:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+
+  
+
+

@@ -1,0 +1,173 @@
+2022-07-30 16:14:24,967||INFO||31||configuration.py||get_training_pipeline_config||Training pipleine config: TrainingPipelineConfig(artifact_dir='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact') 
+2022-07-30 16:14:24,967||INFO||51||pipeline.py||run_pipeline||Pipeline starting. 
+2022-07-30 16:14:24,968||INFO||67||pipeline.py||run_pipeline||Pipeline experiment: Experiment(experiment_id='f7a50ba7-f6a5-4189-af27-29242c24f1e0', initialization_timestamp='2022-07-30-16-14-23', artifact_time_stamp='2022-07-30-16-14-23', running_status=True, start_time=datetime.datetime(2022, 7, 30, 16, 14, 24, 968998), stop_time=None, execution_time=None, message='Pipeline has been started.', experiment_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\experiment\\experiment.csv', accuracy=None, is_model_accepted=None) 
+2022-07-30 16:14:24,975||INFO||48||configuration.py||get_data_ingestion_config||data ingestion config created succefully :{'dataset_download_url': 'https://github.com/sarveswara-rao/Predicting-Energy-loads-of-the-buildings/raw/master/dataset/energy-efficiency-dataset.xlsx', 'raw_data_dir': 'raw_data', 'tgz_download_dir': 'tgz_data', 'ingested_dir': 'ingested_data', 'ingested_train_dir': 'train', 'ingested_test_dir': 'test', 'data_ingestion': 'data_ingestion'} 
+2022-07-30 16:14:24,975||INFO||18||data_ingestion.py||__init__||==================== Data ingestion log started.==================== 
+2022-07-30 16:14:24,975||INFO||34||data_ingestion.py||download_heatload_data||downloading file from :[https://github.com/sarveswara-rao/Predicting-Energy-loads-of-the-buildings/raw/master/dataset/energy-efficiency-dataset.xlsx] in the directory [E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\HeatLoads_predictions\artifact\data_ingestion\2022-07-30-16-14-23\raw_data\energy-efficiency-dataset.xlsx] 
+2022-07-30 16:14:25,897||INFO||36||data_ingestion.py||download_heatload_data||download completed at :[E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\HeatLoads_predictions\artifact\data_ingestion\2022-07-30-16-14-23\raw_data\energy-efficiency-dataset.xlsx] successfully  
+2022-07-30 16:14:25,897||INFO||50||data_ingestion.py||split_data_as_train_test||reading file from folder directory E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\HeatLoads_predictions\artifact\data_ingestion\2022-07-30-16-14-23\raw_data\energy-efficiency-dataset.xlsx 
+2022-07-30 16:14:26,580||INFO||55||data_ingestion.py||split_data_as_train_test||Based on Orientation i.e X5 variable splitting the dataset  
+2022-07-30 16:14:26,866||INFO||68||data_ingestion.py||split_data_as_train_test||Data ingestion artifact returned DataIngestionArtifact(train_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_ingestion\\2022-07-30-16-14-23\\ingested_data\\train\\energy-efficiency-dataset.xlsx', test_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_ingestion\\2022-07-30-16-14-23\\ingested_data\\test\\energy-efficiency-dataset.xlsx', is_ingested=True, message='the ingestion has happened') 
+2022-07-30 16:14:26,866||INFO||57||configuration.py||get_data_validation_config||searching and finding the data validation config  
+2022-07-30 16:14:26,866||INFO||21||data_validation.py||__init__||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+ 
+2022-07-30 16:14:26,866||INFO||39||data_validation.py||is_train_test_file_exists||Checking if training and test file is available 
+2022-07-30 16:14:26,866||INFO||51||data_validation.py||is_train_test_file_exists||Is train and test file exists?-> True 
+2022-07-30 16:14:26,866||INFO||67||data_validation.py||data_validate||logging data from: E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\HeatLoads_predictions\artifact\data_ingestion\2022-07-30-16-14-23\ingested_data\train\energy-efficiency-dataset.xlsx  
+2022-07-30 16:14:26,973||INFO||69||data_validation.py||data_validate||reading the yaml file from E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\config\schema.yaml 
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || X1 and || X1  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || X3 and || X3  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || X4 and || X4  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || X5 and || X5  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || X6 and || X6  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || X7 and || X7  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || X8 and || X8  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || Y1 and || Y1  
+2022-07-30 16:14:26,978||INFO||78||data_validation.py||data_validate||The columns in schema  match || Y2 and || Y2  
+2022-07-30 16:14:26,978||INFO||82||data_validation.py||data_validate||checking for domain values in X4 , X5 ,X6 , X7 , X8  
+2022-07-30 16:14:26,979||INFO||92||data_validation.py||data_validate||checked values and no. of counts of values in categorical columns is same  
+2022-07-30 16:14:26,980||INFO||67||data_validation.py||data_validate||logging data from: E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\HeatLoads_predictions\artifact\data_ingestion\2022-07-30-16-14-23\ingested_data\test\energy-efficiency-dataset.xlsx  
+2022-07-30 16:14:27,014||INFO||69||data_validation.py||data_validate||reading the yaml file from E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\config\schema.yaml 
+2022-07-30 16:14:27,018||INFO||78||data_validation.py||data_validate||The columns in schema  match || X1 and || X1  
+2022-07-30 16:14:27,018||INFO||78||data_validation.py||data_validate||The columns in schema  match || X3 and || X3  
+2022-07-30 16:14:27,018||INFO||78||data_validation.py||data_validate||The columns in schema  match || X4 and || X4  
+2022-07-30 16:14:27,019||INFO||78||data_validation.py||data_validate||The columns in schema  match || X5 and || X5  
+2022-07-30 16:14:27,019||INFO||78||data_validation.py||data_validate||The columns in schema  match || X6 and || X6  
+2022-07-30 16:14:27,019||INFO||78||data_validation.py||data_validate||The columns in schema  match || X7 and || X7  
+2022-07-30 16:14:27,019||INFO||78||data_validation.py||data_validate||The columns in schema  match || X8 and || X8  
+2022-07-30 16:14:27,019||INFO||78||data_validation.py||data_validate||The columns in schema  match || Y1 and || Y1  
+2022-07-30 16:14:27,019||INFO||78||data_validation.py||data_validate||The columns in schema  match || Y2 and || Y2  
+2022-07-30 16:14:27,019||INFO||82||data_validation.py||data_validate||checking for domain values in X4 , X5 ,X6 , X7 , X8  
+2022-07-30 16:14:27,019||INFO||92||data_validation.py||data_validate||checked values and no. of counts of values in categorical columns is same  
+2022-07-30 16:14:27,020||INFO||113||data_validation.py||validate_dataset_schema||Both validated and schema is validated.............>>> 
+2022-07-30 16:14:28,271||INFO||175||data_validation.py||initiate_data_validation||Data validation artifact: DataValidationArtifact(schema_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\config\\schema.yaml', report_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_validation\\2022-07-30-16-14-23\\report.json', report_page_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_validation\\2022-07-30-16-14-23\\report.html', is_validated=True, message='Data Validation performed successully.') 
+2022-07-30 16:14:28,271||INFO||97||configuration.py||get_data_transform_config||searching for the data transformation config------------------- 
+2022-07-30 16:14:28,271||INFO||117||configuration.py||get_data_transform_config||the data transformation config is found DataTransformationConfig(transformed_train_dir='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_transformation\\2022-07-30-16-14-23\\transformed_data\\train', transformed_test_dir='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_transformation\\2022-07-30-16-14-23\\transformed_data\\test', preprocessed_object_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_transformation\\2022-07-30-16-14-23\\preprocessed\\preprocessed.pkl') and returned to pipeline  
+2022-07-30 16:14:28,271||INFO||28||data_transformation.py||__init__||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  
+2022-07-30 16:14:28,271||INFO||73||data_transformation.py||initiate_data_transformation||Obtaining preprocessing object. 
+2022-07-30 16:14:28,277||INFO||57||data_transformation.py||get_data_transformer_object||Categorical columns: ['X4', 'X5', 'X6', 'X7', 'X8'] 
+2022-07-30 16:14:28,277||INFO||58||data_transformation.py||get_data_transformer_object||Numerical columns: ['X1', 'X3'] 
+2022-07-30 16:14:28,277||INFO||77||data_transformation.py||initiate_data_transformation||Obtaining training and test file path. 
+2022-07-30 16:14:28,277||INFO||84||data_transformation.py||initiate_data_transformation||Loading training and test data as pandas dataframe. 
+2022-07-30 16:14:28,404||INFO||94||data_transformation.py||initiate_data_transformation||Splitting input and target feature from training and testing dataframe. 
+2022-07-30 16:14:28,407||INFO||102||data_transformation.py||initiate_data_transformation||Applying preprocessing object on training dataframe and testing dataframe 
+2022-07-30 16:14:28,427||INFO||120||data_transformation.py||initiate_data_transformation||Saving transformed training and testing array. 
+2022-07-30 16:14:28,433||INFO||127||data_transformation.py||initiate_data_transformation||Saving preprocessing object. 
+2022-07-30 16:14:28,438||INFO||137||data_transformation.py||initiate_data_transformation||Data transformationa artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfull.', transformed_train_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_transformation\\2022-07-30-16-14-23\\transformed_data\\train\\energy-efficiency-dataset.npz', transformed_test_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_transformation\\2022-07-30-16-14-23\\transformed_data\\test\\energy-efficiency-dataset.npz', preprocessed_object_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\data_transformation\\2022-07-30-16-14-23\\preprocessed\\preprocessed.pkl') 
+2022-07-30 16:14:28,438||INFO||143||data_transformation.py||__del__||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+ 
+2022-07-30 16:14:28,438||INFO||150||configuration.py||get_model_trainer_config||Model trainer config: ModelTrainerConfig(trained_model_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\model_trainer\\2022-07-30-16-14-23\\trained_model\\model.pkl', base_accuracy=0.6, model_config_file_path='config\\model.yaml') 
+2022-07-30 16:14:28,438||INFO||43||model_trainer.py||__init__||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  
+2022-07-30 16:14:28,438||INFO||51||model_trainer.py||initiate_model_trainer||Loading transformed training dataset 
+2022-07-30 16:14:28,451||INFO||55||model_trainer.py||initiate_model_trainer||Loading transformed testing dataset 
+2022-07-30 16:14:28,458||INFO||59||model_trainer.py||initiate_model_trainer||Splitting training and testing input and target feature 
+2022-07-30 16:14:28,458||INFO||64||model_trainer.py||initiate_model_trainer||Extracting model config file path 
+2022-07-30 16:14:28,458||INFO||67||model_trainer.py||initiate_model_trainer||Initializing model factory class using above model config file: config\model.yaml 
+2022-07-30 16:14:28,474||INFO||72||model_trainer.py||initiate_model_trainer||Expected accuracy: 0.6 
+2022-07-30 16:14:28,474||INFO||74||model_trainer.py||initiate_model_trainer||Initiating operation model selecttion 
+2022-07-30 16:14:28,474||INFO||365||model_factory.py||get_best_model||Started Initializing model from config file 
+2022-07-30 16:14:28,475||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.linear_model' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\linear_model\\__init__.py'> import LinearRegression 
+2022-07-30 16:14:28,476||INFO||185||model_factory.py||update_property_of_class||Executing:$ LinearRegression().fit_intercept=True 
+2022-07-30 16:14:28,523||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.ensemble' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\ensemble\\__init__.py'> import RandomForestRegressor 
+2022-07-30 16:14:28,524||INFO||185||model_factory.py||update_property_of_class||Executing:$ RandomForestRegressor().min_samples_leaf=6 
+2022-07-30 16:14:28,524||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.svm' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\svm\\__init__.py'> import SVR 
+2022-07-30 16:14:28,525||INFO||185||model_factory.py||update_property_of_class||Executing:$ SVR().C=1 
+2022-07-30 16:14:28,525||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.tree' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\tree\\__init__.py'> import DecisionTreeRegressor 
+2022-07-30 16:14:28,525||INFO||185||model_factory.py||update_property_of_class||Executing:$ DecisionTreeRegressor().max_depth=[4] 
+2022-07-30 16:14:28,526||INFO||367||model_factory.py||get_best_model||Initialized model: [InitializedModelDetail(model_serial_number='module_0', model=LinearRegression(), param_grid_search={'fit_intercept': [True, False]}, model_name='sklearn.linear_model.LinearRegression'), InitializedModelDetail(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=6), param_grid_search={'min_samples_leaf': [5, 10, 15], 'n_estimators': [5, 10, 20, 100], 'max_depth': [4, 5, 7, 8], 'min_samples_split': [10, 20, 30, 40]}, model_name='sklearn.ensemble.RandomForestRegressor'), InitializedModelDetail(model_serial_number='module_2', model=SVR(C=1), param_grid_search={'C': [1, 5, 10], 'kernel': ['rbf', 'poly', 'sigmoid'], 'epsilon': [0.1, 0.2, 1, 5]}, model_name='sklearn.svm.SVR'), InitializedModelDetail(model_serial_number='module_3', model=DecisionTreeRegressor(max_depth=[4]), param_grid_search={'max_depth': [4, 5, 10, 20], 'min_samples_split': [10, 20, 30, 40], 'min_samples_leaf': [10, 20, 30, 5]}, model_name='sklearn.tree.DecisionTreeRegressor')] 
+2022-07-30 16:14:28,527||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.model_selection' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV 
+2022-07-30 16:14:28,528||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).cv=5 
+2022-07-30 16:14:28,529||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(cv=5, estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).verbose=2 
+2022-07-30 16:14:28,529||INFO||239||model_factory.py||execute_grid_search_operation||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LinearRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:14:28,551||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.model_selection' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV 
+2022-07-30 16:14:28,553||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(estimator=RandomForestRegressor(min_samples_leaf=6),
+             param_grid={'max_depth': [4, 5, 7, 8],
+                         'min_samples_leaf': [5, 10, 15],
+                         'min_samples_split': [10, 20, 30, 40],
+                         'n_estimators': [5, 10, 20, 100]}).cv=5 
+2022-07-30 16:14:28,555||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(cv=5, estimator=RandomForestRegressor(min_samples_leaf=6),
+             param_grid={'max_depth': [4, 5, 7, 8],
+                         'min_samples_leaf': [5, 10, 15],
+                         'min_samples_split': [10, 20, 30, 40],
+                         'n_estimators': [5, 10, 20, 100]}).verbose=2 
+2022-07-30 16:14:28,556||INFO||239||model_factory.py||execute_grid_search_operation||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestRegressor Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:18,881||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.model_selection' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV 
+2022-07-30 16:15:18,883||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(estimator=SVR(C=1),
+             param_grid={'C': [1, 5, 10], 'epsilon': [0.1, 0.2, 1, 5],
+                         'kernel': ['rbf', 'poly', 'sigmoid']}).cv=5 
+2022-07-30 16:15:18,883||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(cv=5, estimator=SVR(C=1),
+             param_grid={'C': [1, 5, 10], 'epsilon': [0.1, 0.2, 1, 5],
+                         'kernel': ['rbf', 'poly', 'sigmoid']}).verbose=2 
+2022-07-30 16:15:18,883||INFO||239||model_factory.py||execute_grid_search_operation||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVR Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,061||INFO||206||model_factory.py||class_for_name||Executing command: from <module 'sklearn.model_selection' from 'E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\myenv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV 
+2022-07-30 16:15:25,063||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(estimator=DecisionTreeRegressor(max_depth=[4]),
+             param_grid={'max_depth': [4, 5, 10, 20],
+                         'min_samples_leaf': [10, 20, 30, 5],
+                         'min_samples_split': [10, 20, 30, 40]}).cv=5 
+2022-07-30 16:15:25,064||INFO||185||model_factory.py||update_property_of_class||Executing:$ GridSearchCV(cv=5, estimator=DecisionTreeRegressor(max_depth=[4]),
+             param_grid={'max_depth': [4, 5, 10, 20],
+                         'min_samples_leaf': [10, 20, 30, 5],
+                         'min_samples_split': [10, 20, 30, 40]}).verbose=2 
+2022-07-30 16:15:25,064||INFO||239||model_factory.py||execute_grid_search_operation||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training DecisionTreeRegressor Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,838||INFO||352||model_factory.py||get_best_model_from_grid_searched_best_model_list||Acceptable model found:GridSearchedBestModel(model_serial_number='module_0', model=LinearRegression(), best_model=LinearRegression(), best_parameters={'fit_intercept': True}, best_score=0.906138056219962) 
+2022-07-30 16:15:25,839||INFO||352||model_factory.py||get_best_model_from_grid_searched_best_model_list||Acceptable model found:GridSearchedBestModel(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=6), best_model=RandomForestRegressor(max_depth=8, min_samples_leaf=5, min_samples_split=10,
+                      n_estimators=20), best_parameters={'max_depth': 8, 'min_samples_leaf': 5, 'min_samples_split': 10, 'n_estimators': 20}, best_score=0.9927132750849553) 
+2022-07-30 16:15:25,842||INFO||352||model_factory.py||get_best_model_from_grid_searched_best_model_list||Acceptable model found:GridSearchedBestModel(model_serial_number='module_3', model=DecisionTreeRegressor(max_depth=[4]), best_model=DecisionTreeRegressor(max_depth=10, min_samples_leaf=5, min_samples_split=10), best_parameters={'max_depth': 10, 'min_samples_leaf': 5, 'min_samples_split': 10}, best_score=0.9935770954326972) 
+2022-07-30 16:15:25,843||INFO||358||model_factory.py||get_best_model_from_grid_searched_best_model_list||Best model: GridSearchedBestModel(model_serial_number='module_3', model=DecisionTreeRegressor(max_depth=[4]), best_model=DecisionTreeRegressor(max_depth=10, min_samples_leaf=5, min_samples_split=10), best_parameters={'max_depth': 10, 'min_samples_leaf': 5, 'min_samples_split': 10}, best_score=0.9935770954326972) 
+2022-07-30 16:15:25,844||INFO||77||model_trainer.py||initiate_model_trainer||Best model found on training dataset: GridSearchedBestModel(model_serial_number='module_3', model=DecisionTreeRegressor(max_depth=[4]), best_model=DecisionTreeRegressor(max_depth=10, min_samples_leaf=5, min_samples_split=10), best_parameters={'max_depth': 10, 'min_samples_leaf': 5, 'min_samples_split': 10}, best_score=0.9935770954326972) 
+2022-07-30 16:15:25,844||INFO||79||model_trainer.py||initiate_model_trainer||Extracting trained model list. 
+2022-07-30 16:15:25,844||INFO||83||model_trainer.py||initiate_model_trainer||Evaluation all trained model on training and testing dataset both 
+2022-07-30 16:15:25,844||INFO||72||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [LinearRegression] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,846||INFO||91||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,846||INFO||92||model_factory.py||evaluate_regression_model||Train Score		 Test Score		 Model_accuracy 
+2022-07-30 16:15:25,846||INFO||93||model_factory.py||evaluate_regression_model||0.9096556147192237		 0.942779845743135		0.9259215756000616 
+2022-07-30 16:15:25,846||INFO||95||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,846||INFO||96||model_factory.py||evaluate_regression_model||Diff test train accuracy: [0.033124231023911266]. 
+2022-07-30 16:15:25,846||INFO||97||model_factory.py||evaluate_regression_model||Train root mean squared error: [3.0427594256566435]. 
+2022-07-30 16:15:25,846||INFO||98||model_factory.py||evaluate_regression_model||Test root mean squared error: [2.372481067593264]. 
+2022-07-30 16:15:25,847||INFO||100||model_factory.py||evaluate_regression_model||base accuracy from last model training is : [0.6] 
+2022-07-30 16:15:25,847||INFO||114||model_factory.py||evaluate_regression_model||Acceptable model found MetricInfoArtifact(model_name='LinearRegression()', model_object=LinearRegression(), train_rmse=3.0427594256566435, test_rmse=2.372481067593264, train_accuracy=0.9096556147192237, test_accuracy=0.942779845743135, model_accuracy=0.9259215756000616, index_number=0).  
+2022-07-30 16:15:25,847||INFO||72||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [RandomForestRegressor] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,856||INFO||91||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,856||INFO||92||model_factory.py||evaluate_regression_model||Train Score		 Test Score		 Model_accuracy 
+2022-07-30 16:15:25,856||INFO||93||model_factory.py||evaluate_regression_model||0.9962097369514904		 0.9967551945975637		0.9964823911309548 
+2022-07-30 16:15:25,856||INFO||95||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,856||INFO||96||model_factory.py||evaluate_regression_model||Diff test train accuracy: [0.0005454576460732774]. 
+2022-07-30 16:15:25,856||INFO||97||model_factory.py||evaluate_regression_model||Train root mean squared error: [0.6232348189969914]. 
+2022-07-30 16:15:25,857||INFO||98||model_factory.py||evaluate_regression_model||Test root mean squared error: [0.5649663369422427]. 
+2022-07-30 16:15:25,857||INFO||100||model_factory.py||evaluate_regression_model||base accuracy from last model training is : [0.9259215756000616] 
+2022-07-30 16:15:25,857||INFO||114||model_factory.py||evaluate_regression_model||Acceptable model found MetricInfoArtifact(model_name='RandomForestRegressor(max_depth=8, min_samples_leaf=5, min_samples_split=10,\n                      n_estimators=20)', model_object=RandomForestRegressor(max_depth=8, min_samples_leaf=5, min_samples_split=10,
+                      n_estimators=20), train_rmse=0.6232348189969914, test_rmse=0.5649663369422427, train_accuracy=0.9962097369514904, test_accuracy=0.9967551945975637, model_accuracy=0.9964823911309548, index_number=1).  
+2022-07-30 16:15:25,858||INFO||72||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [SVR] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,901||INFO||91||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,902||INFO||92||model_factory.py||evaluate_regression_model||Train Score		 Test Score		 Model_accuracy 
+2022-07-30 16:15:25,902||INFO||93||model_factory.py||evaluate_regression_model||0.9555038981086565		 0.9630596546652223		0.9592668982097062 
+2022-07-30 16:15:25,902||INFO||95||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,902||INFO||96||model_factory.py||evaluate_regression_model||Diff test train accuracy: [0.007555756556565707]. 
+2022-07-30 16:15:25,902||INFO||97||model_factory.py||evaluate_regression_model||Train root mean squared error: [2.1353939887241515]. 
+2022-07-30 16:15:25,902||INFO||98||model_factory.py||evaluate_regression_model||Test root mean squared error: [1.906245005726188]. 
+2022-07-30 16:15:25,902||INFO||100||model_factory.py||evaluate_regression_model||base accuracy from last model training is : [0.9964823911309548] 
+2022-07-30 16:15:25,903||INFO||72||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [DecisionTreeRegressor] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,905||INFO||91||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,905||INFO||92||model_factory.py||evaluate_regression_model||Train Score		 Test Score		 Model_accuracy 
+2022-07-30 16:15:25,905||INFO||93||model_factory.py||evaluate_regression_model||0.9967318984178108		 0.9970904228385394		0.9969111283936679 
+2022-07-30 16:15:25,905||INFO||95||model_factory.py||evaluate_regression_model||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-07-30 16:15:25,905||INFO||96||model_factory.py||evaluate_regression_model||Diff test train accuracy: [0.0003585244207285898]. 
+2022-07-30 16:15:25,905||INFO||97||model_factory.py||evaluate_regression_model||Train root mean squared error: [0.5787150895769781]. 
+2022-07-30 16:15:25,905||INFO||98||model_factory.py||evaluate_regression_model||Test root mean squared error: [0.5349869432287911]. 
+2022-07-30 16:15:25,905||INFO||100||model_factory.py||evaluate_regression_model||base accuracy from last model training is : [0.9964823911309548] 
+2022-07-30 16:15:25,906||INFO||114||model_factory.py||evaluate_regression_model||Acceptable model found MetricInfoArtifact(model_name='DecisionTreeRegressor(max_depth=10, min_samples_leaf=5, min_samples_split=10)', model_object=DecisionTreeRegressor(max_depth=10, min_samples_leaf=5, min_samples_split=10), train_rmse=0.5787150895769781, test_rmse=0.5349869432287911, train_accuracy=0.9967318984178108, test_accuracy=0.9970904228385394, model_accuracy=0.9969111283936679, index_number=3).  
+2022-07-30 16:15:25,906||INFO||119||model_factory.py||evaluate_regression_model||returning metric info artifact after regression testing: [MetricInfoArtifact(model_name='DecisionTreeRegressor(max_depth=10, min_samples_leaf=5, min_samples_split=10)', model_object=DecisionTreeRegressor(max_depth=10, min_samples_leaf=5, min_samples_split=10), train_rmse=0.5787150895769781, test_rmse=0.5349869432287911, train_accuracy=0.9967318984178108, test_accuracy=0.9970904228385394, model_accuracy=0.9969111283936679, index_number=3)] 
+2022-07-30 16:15:25,907||INFO||86||model_trainer.py||initiate_model_trainer||Best found model on both training and testing dataset. 
+2022-07-30 16:15:25,908||INFO||92||model_trainer.py||initiate_model_trainer||Saving model at path: E:\Python Programming\Machine learing projects start\Internship\Heatingload_predictions\HeatLoads_predictions\artifact\model_trainer\2022-07-30-16-14-23\trained_model\model.pkl 
+2022-07-30 16:15:25,912||INFO||106||model_trainer.py||initiate_model_trainer||Model Trainer Artifact: ModelTrainerArtifact(is_trained=True, message='Model Trained successfully', trained_model_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\model_trainer\\2022-07-30-16-14-23\\trained_model\\model.pkl', train_rmse=0.5787150895769781, test_rmse=0.5349869432287911, train_accuracy=0.9967318984178108, test_accuracy=0.9970904228385394, model_accuracy=0.9969111283936679) 
+2022-07-30 16:15:25,912||INFO||168||configuration.py||get_model_evaluation_config||Model Evaluation Config: ModelEvaluationConfig(model_evaluation_file_path='E:\\Python Programming\\Machine learing projects start\\Internship\\Heatingload_predictions\\HeatLoads_predictions\\artifact\\model_evaluation\\model_evaluation.yaml', time_stamp='2022-07-30-16-14-23'). 
+2022-07-30 16:15:25,912||INFO||24||model_evaluation.py||__init__||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Evaluation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  
+2022-07-30 16:15:26,023||INFO||106||model_evaluation.py||initiate_model_evaluation||Converting target column into numpy array. 
+2022-07-30 16:15:26,024||INFO||109||model_evaluation.py||initiate_model_evaluation||Conversion completed target column into numpy array. 
+2022-07-30 16:15:26,024||INFO||112||model_evaluation.py||initiate_model_evaluation||Dropping target column from the dataframe. 
+2022-07-30 16:15:26,025||INFO||115||model_evaluation.py||initiate_model_evaluation||Dropping target column from the dataframe completed. 

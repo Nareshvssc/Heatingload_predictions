@@ -1,0 +1,12 @@
+kaggle
+numpy
+sklearn
+ipykernel
+flask
+gunicorn
+PyYAML
+pandas
+evidently
+dill
+matplotlib
+pandas
